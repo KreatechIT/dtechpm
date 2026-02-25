@@ -9,7 +9,7 @@ app.use(bodyParser.json());
 app.use(express.json());
 
 require("dotenv").config();
-const port = process.env.PORT;
+const port = process.env.PORT || 4000;
 
 const mysql = require("mysql2");
 const connection = require("./config/connection");
