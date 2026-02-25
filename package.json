@@ -1,0 +1,31 @@
+{
+    "name": "api",
+    "version": "1.0.0",
+    "description": "",
+    "main": "index.js",
+    "scripts": {
+        "start": "nodemon index.js",
+        "build": "npm install && npm run start"
+    },
+    "keywords": [],
+    "author": "",
+    "license": "ISC",
+    "dependencies": {
+        "bcrypt": "^5.1.1",
+        "cors": "^2.8.5",
+        "dotenv": "^16.3.1",
+        "express.js": "^1.0.0",
+        "joi": "^17.12.2",
+        "jsonwebtoken": "^9.0.2",
+        "multer": "^1.4.5-lts.1",
+        "mysql": "^2.18.1",
+        "mysql2": "^3.6.2",
+        "nodemon": "^3.0.3",
+        "rate-limiter-flexible": "^5.0.0",
+        "redis": "^4.6.13",
+        "util": "^0.12.5"
+    },
+    "devDependencies": {
+        "prettier": "3.2.5"
+    }
+}
