@@ -21,6 +21,15 @@ app.get("/", (req, res) => {
   res.send("Message is being shown here. Connected!");
 });
 
+app.get("/test-db", (req, res) => {
+  connection.query("SELECT 1 + 1 AS result", (error, results) => {
+    if (error) {
+      return res.status(500).json({ error: "Database connection failed", details: error.message });
+    }
+    res.json({ message: "Database is working!", result: results[0] });
+  });
+});
+
 app.use("/uploads", express.static("uploads"));
 
 // Include user routes
