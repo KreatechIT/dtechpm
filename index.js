@@ -75,6 +75,12 @@ app.use("/request", myrequestRoutes);
 const report = require("./Routes/reportRoutes");
 app.use("/report", report);
 
-app.listen(port, () => {
-  console.log(`Connected to port: ${port}`);
-});
+// Export for Vercel serverless
+module.exports = app;
+
+// Only listen if not in serverless environment
+if (process.env.NODE_ENV !== 'production') {
+  app.listen(port, () => {
+    console.log(`Connected to port: ${port}`);
+  });
+}
